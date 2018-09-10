@@ -15,6 +15,10 @@
       <Configuration>Debug</Configuration>
       <Platform>ARM</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
@@ -26,6 +30,10 @@
     <ProjectConfiguration Include="Release|Arm">
       <Configuration>Release</Configuration>
       <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -52,12 +60,16 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\data\tmp\x64\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">.\data\tmp\arm\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">.\data\tmp\arm\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">.\data\tmp\arm64\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">.\data\tmp\arm64\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\data\build\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\data\build\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\data\build\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\data\build\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">.\data\build\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">.\data\build\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">.\data\build\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">.\data\build\</IntDir>
     <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NMAKE /f makedata.mak ICUMAKE="$(ProjectDir)\" CFG=x86\Release UWP=UWP</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NMAKE /f makedata.mak ICUMAKE="$(ProjectDir)\" CFG=x86\Release UWP=UWP clean all</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NMAKE /f makedata.mak ICUMAKE="$(ProjectDir)\" CFG=x86\Release UWP=UWP clean</NMakeCleanCommandLine>
@@ -76,6 +88,12 @@
     <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NMAKE /f makedata.mak ICUMAKE="$(ProjectDir)\" CFG=ARM\Debug UWP=UWP</NMakeBuildCommandLine>
     <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NMAKE /f makedata.mak ICUMAKE="$(ProjectDir)\" CFG=ARM\Debug UWP=UWP clean all</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">NMAKE /f makedata.mak ICUMAKE="$(ProjectDir)\" CFG=ARM\Debug UWP=UWP clean</NMakeCleanCommandLine>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">NMAKE /f makedata.mak ICUMAKE="$(ProjectDir)\" CFG=ARM64\Release UWP=UWP</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">NMAKE /f makedata.mak ICUMAKE="$(ProjectDir)\" CFG=ARM64\Release UWP=UWP clean all</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">NMAKE /f makedata.mak ICUMAKE="$(ProjectDir)\" CFG=ARM64\Release UWP=UWP clean</NMakeCleanCommandLine>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">NMAKE /f makedata.mak ICUMAKE="$(ProjectDir)\" CFG=ARM64\Debug UWP=UWP</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">NMAKE /f makedata.mak ICUMAKE="$(ProjectDir)\" CFG=ARM64\Debug UWP=UWP clean all</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">NMAKE /f makedata.mak ICUMAKE="$(ProjectDir)\" CFG=ARM64\Debug UWP=UWP clean</NMakeCleanCommandLine>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <BuildLog>
@@ -105,6 +123,16 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <BuildLog>
       <Path>.\out\tmp\arm\DebugUWPBuildLog.html</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <BuildLog>
+      <Path>.\out\tmp\arm64\ReleaseUWPBuildLog.html</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <BuildLog>
+      <Path>.\out\tmp\arm64\DebugUWPBuildLog.html</Path>
     </BuildLog>
   </ItemDefinitionGroup>
   <ItemGroup>
